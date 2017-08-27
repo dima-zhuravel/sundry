@@ -1,0 +1,85 @@
+body {
+    background: #4568DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.sitemap {
+    &__title {
+        padding: 40px 20px;
+        font-size: 48px;
+        font-weight: 400;
+        text-align: center;
+        color: #fff;
+    }
+
+    &__list {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    &__list-item {
+        position: relative;
+        display: inline-block;
+        line-height: 44px;
+        perspective: 1000px;
+        outline: none;
+        font-weight: 400;
+        font-size: 1.35em;
+        letter-spacing: 1px;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-shadow: 0 0 1px rgba(255,255,255,0.3);
+        margin-right: 20px;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+
+        &:hover {
+            .sitemap__list-item_linktext {
+                transform: rotateX(90deg) translateY(-22px);
+            }
+
+            &::before {
+                content: attr(data-hover);
+                background: #28a2ee;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transition: background 0.3s;
+                transform: rotateX(-90deg);
+                transform-origin: 50% 0;
+            }
+        }
+    }
+
+    &__list-item_linktext {
+        position: relative;
+        display: inline-block;
+        padding: 0 14px;
+        background: #2195de;
+        color: #fff;
+        transition: transform 0.3s;
+        transform-origin: 50% 0;
+        transform-style: preserve-3d;
+
+        &::before {
+            content: attr(data-hover);
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0965a0;
+            text-align: center;
+            transition: background 0.3s;
+            transform: rotateX(-90deg);
+            transform-origin: 50% 0;
+        }
+    }
+}

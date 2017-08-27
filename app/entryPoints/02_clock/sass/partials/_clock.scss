@@ -1,0 +1,59 @@
+:root {
+    min-height: 100%;
+    height: 100%;
+}
+
+body {
+    min-height: inherit;
+    height: inherit; 
+    background: #22c1c3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.clock-wrapper {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock {
+    position: relative;
+    display: block;
+    width: 20em;
+    height: 20em;
+    border-radius: 100%;
+    border: 10px solid #BB2A0D;
+    box-shadow: inset 0px 0px 40px 2px #bb2a0d;
+
+    &__dial-arrow {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        width: calc(50% - 10px);
+        height: 3px;
+        background: #D49D9D;
+        transform: rotate(90deg);
+        transform-origin: 100%;
+        transition: all 0.03s cubic-bezier(0, 2.93, 0.25, 1);
+    }
+}
+
+.second-arrow {
+    background: #851605;
+}
+
+.minute-arrow {
+    background: #05638E;
+    left: 25px;
+    width: calc(50% - 25px);
+}
+
+.hour-arrow {
+    background: #052B47;
+    left: 45px;
+    width: calc(50% - 45px);
+}
+

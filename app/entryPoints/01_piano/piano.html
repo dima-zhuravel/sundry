@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <main class="piano-wrapper">
+        <div class="keys-list" id="keys">
+            <div class="keys-list__item key" data-key="65">
+                <kbd class="keys-list__item_symbol">A</kbd> 
+                <span class="keys-list__item_note">Do</span>
+            </div>
+            <div class="keys-list__item key" data-key="83">
+                <kbd class="keys-list__item_symbol">S</kbd> 
+                <span class="keys-list__item_note">Re</span>
+            </div>
+            <div class="keys-list__item key" data-key="68">
+                <kbd class="keys-list__item_symbol">D</kbd> 
+                <span class="keys-list__item_note">Mi</span>
+            </div>
+            <div class="keys-list__item key" data-key="70">
+                <kbd class="keys-list__item_symbol">F</kbd> 
+                <span class="keys-list__item_note">Fa</span>
+            </div>
+            <div class="keys-list__item key" data-key="71">
+                <kbd class="keys-list__item_symbol">G</kbd> 
+                <span class="keys-list__item_note">Sol</span>
+            </div>
+            <div class="keys-list__item key" data-key="72">
+                <kbd class="keys-list__item_symbol">H</kbd> 
+                <span class="keys-list__item_note">La</span>
+            </div>
+            <div class="keys-list__item key" data-key="74">
+                <kbd class="keys-list__item_symbol">J</kbd> 
+                <span class="keys-list__item_note">Si</span>
+            </div>
+            <div class="keys-list__item key" data-key="75">
+                <kbd class="keys-list__item_symbol">K</kbd> 
+                <span class="keys-list__item_note">Do</span>
+            </div>
+        </div>
+
+        <div class="" id="audio" style="display: none;">
+            <audio  data-key="65" controls src="<%=require('../../audio/do.wav')%>"></audio>
+            <audio  data-key="83" controls src="<%=require('../../audio/re.wav')%>"></audio>
+            <audio  data-key="68" controls src="<%=require('../../audio/mi.wav')%>"></audio>
+            <audio  data-key="70" controls src="<%=require('../../audio/fa.wav')%>"></audio>
+            <audio  data-key="71" controls src="<%=require('../../audio/sol.wav')%>"></audio>
+            <audio  data-key="72" controls src="<%=require('../../audio/la.wav')%>"></audio>
+            <audio  data-key="74" controls src="<%=require('../../audio/si.wav')%>"></audio>
+            <audio  data-key="75" controls src="<%=require('../../audio/do.wav')%>"></audio>
+        </div>
+    </main>
+    
+</body>
+</html>

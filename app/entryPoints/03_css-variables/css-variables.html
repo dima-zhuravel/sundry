@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <main class="variables-wrapper">
+        <p class="h1">Update CSS variables through the <span class="h1__color">JS</span></p>
+        <div class="variables">
+            <p class="variables__item">    
+                <label class="label" for="width">Block width</label>
+                <input class="input variables__item-input" type="range" value="50" name="width" data-sizing="px" min="50" max="500">
+            </p>
+            
+            <p class="variables__item">
+                <label class="label" for="height">Block height</label>
+                <input class="input variables__item-input" type="range" value="50" name="height" data-sizing="px" min="50" max="500">
+            </p>
+                
+            <p class="variables__item">
+                <label class="label" for="background">Background color</label>
+                <input class="input variables__item-input" type="color" value="#ffffff" name="color">
+            </p>
+            <div class="variables__dynamic-block"></div>
+        </div>
+    </main>
+</body>
+</html>
